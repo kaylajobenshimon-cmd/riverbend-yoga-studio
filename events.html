@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Events | Riverbend Yoga Studio</title>
+</head>
+<body>
+    <header>
+        <h1>Riverbend Yoga Events</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="events.html">Events</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Monthly Workshops</h2>
+        <ul>
+            <li>Beginner Yoga Basics - September 12</li>
+            <li>Desk-to-Mat Stretch Workshop - September 19</li>
+            <li>Rest and Restore Evening - September 26</li>
+        </ul>
+
+        <figure>
+            <img src="media/yoga-workshop.jpg"
+                 alt="Students practicing yoga during a workshop">
+            <figcaption>
+                Riverbend workshops give students extra time to learn and practice.
+            </figcaption>
+        </figure>
+
+        <h2>Request a Spot</h2>
+
+        <form>
+            <fieldset>
+                <legend>Workshop Request</legend>
+
+                <p>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </p>
+
+                <p>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </p>
+
+                <p>
+                    <label for="workshop">Choose a workshop:</label>
+                    <select id="workshop" name="workshop" required>
+                        <option value="">Choose one</option>
+                        <option value="beginner">Beginner Yoga Basics</option>
+                        <option value="stretch">Desk-to-Mat Stretch Workshop</option>
+                        <option value="restore">Rest and Restore Evening</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="message">Questions:</label>
+                    <textarea id="message" name="message"></textarea>
+                </p>
+
+                <input type="submit" value="Request a Spot">
+            </fieldset>
+        </form>
+    </main>
+
+    <footer>
+        <p>Riverbend Yoga Studio</p>
+    </footer>
+</body>
+</html>
