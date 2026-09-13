@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Events | Riverbend Yoga Studio</title>
-     <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
+
     <header>
         <h1>Riverbend Yoga Events</h1>
+
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -20,7 +23,9 @@
     </header>
 
     <main>
+
         <h2>Monthly Workshops</h2>
+
         <ul>
             <li>Beginner Yoga Basics - September 12</li>
             <li>Desk-to-Mat Stretch Workshop - September 19</li>
@@ -30,6 +35,7 @@
         <figure>
             <img src="yoga-workshop.png"
                  alt="Students practicing yoga during a workshop">
+
             <figcaption>
                 Riverbend workshops give students extra time to learn and practice.
             </figcaption>
@@ -38,19 +44,35 @@
         <h2>Request a Spot</h2>
 
         <form>
-         <label for="email">Email:</label><br>
-<input type="email" id="email" name="email">
-<p id="email-error"></p>
-            <label for="name">Name:</label><br>
-<input type="text" id="name" name="name">
-<p id="name-error"></p>
-            <input type="submit" value="Submit">
-            <p id="success-message"></p>
+
+            <fieldset>
+
+                <legend>Workshop Request</legend>
+
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email">
+                <p id="email-error"></p>
+
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name">
+                <p id="name-error"></p>
+
+                <input type="submit" value="Submit">
+
+                <p id="success-message"></p>
+
+            </fieldset>
+
         </form>
+
     </main>
 
     <footer>
         <p>Riverbend Yoga Studio</p>
     </footer>
+
+    <script src="script.js"></script>
+
 </body>
+
 </html>
