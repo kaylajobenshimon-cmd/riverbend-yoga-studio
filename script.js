@@ -48,3 +48,23 @@ form.addEventListener("submit", function (event) {
     }
 
 });
+
+if (valid) {
+    localStorage.setItem("name", name.value);
+    localStorage.setItem("email", email.value);
+}
+
+window.onload = function () {
+
+    const savedName = localStorage.getItem("name");
+    const savedEmail = localStorage.getItem("email");
+
+    if (savedName) {
+        document.getElementById("name").value = savedName;
+    }
+
+    if (savedEmail) {
+        document.getElementById("email").value = savedEmail;
+    }
+
+};
