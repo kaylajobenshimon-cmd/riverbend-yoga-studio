@@ -75,3 +75,17 @@ const workshops = [
     "Desk-to-Mat Stretch Workshop",
     "Rest and Restore Evening"
 ];
+
+if (!valid) {
+    event.preventDefault();
+} else {
+    event.preventDefault();
+
+    localStorage.setItem("name", name.value);
+    localStorage.setItem("email", email.value);
+
+    document.getElementById("success-message").textContent =
+        "Thank you! Your request has been submitted.";
+
+    form.reset();
+}
