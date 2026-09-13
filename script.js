@@ -1,3 +1,4 @@
+// Yoga class data
 const yogaClasses = [
     {
         preference: "gentle",
@@ -16,9 +17,19 @@ const yogaClasses = [
     }
 ];
 
+// Workshop list
+const workshops = [
+    "Beginner Yoga Basics",
+    "Desk-to-Mat Stretch Workshop",
+    "Rest and Restore Evening"
+];
+
+// Form
 const form = document.querySelector("form");
 
 form.addEventListener("submit", function (event) {
+
+    event.preventDefault();
 
     let valid = true;
 
@@ -27,33 +38,40 @@ form.addEventListener("submit", function (event) {
 
     const nameError = document.getElementById("name-error");
     const emailError = document.getElementById("email-error");
+    const successMessage = document.getElementById("success-message");
 
+    // Clear old messages
     nameError.textContent = "";
     emailError.textContent = "";
+    successMessage.textContent = "";
 
-    // Check 1: Name is required
+    // Name validation
     if (name.value.trim() === "") {
         nameError.textContent = "Please enter your name.";
         valid = false;
     }
 
-    // Check 2: Email format
+    // Email validation
     if (!email.value.includes("@") || !email.value.includes(".")) {
         emailError.textContent = "Please enter a valid email address.";
         valid = false;
     }
 
-    if (!valid) {
-        event.preventDefault();
+    // If everything is valid
+    if (valid) {
+
+        localStorage.setItem("name", name.value);
+        localStorage.setItem("email", email.value);
+
+        successMessage.textContent =
+            "Thank you! Your request has been submitted.";
+
+        form.reset();
     }
 
 });
 
-if (valid) {
-    localStorage.setItem("name", name.value);
-    localStorage.setItem("email", email.value);
-}
-
+// Load saved information
 window.onload = function () {
 
     const savedName = localStorage.getItem("name");
@@ -68,24 +86,3 @@ window.onload = function () {
     }
 
 };
-
-
-const workshops = [
-    "Beginner Yoga Basics",
-    "Desk-to-Mat Stretch Workshop",
-    "Rest and Restore Evening"
-];
-
-if (!valid) {
-    event.preventDefault();
-} else {
-    event.preventDefault();
-
-    localStorage.setItem("name", name.value);
-    localStorage.setItem("email", email.value);
-
-    document.getElementById("success-message").textContent =
-        "Thank you! Your request has been submitted.";
-
-    form.reset();
-}
