@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Events | Riverbend Yoga Studio</title>
+     <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
 </head>
 <body>
     <header>
@@ -36,36 +38,9 @@
         <h2>Request a Spot</h2>
 
         <form>
-            <fieldset>
-                <legend>Workshop Request</legend>
-
-                <p>
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
-                </p>
-
-                <p>
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                </p>
-
-                <p>
-                    <label for="workshop">Choose a workshop:</label>
-                    <select id="workshop" name="workshop" required>
-                        <option value="">Choose one</option>
-                        <option value="beginner">Beginner Yoga Basics</option>
-                        <option value="stretch">Desk-to-Mat Stretch Workshop</option>
-                        <option value="restore">Rest and Restore Evening</option>
-                    </select>
-                </p>
-
-                <p>
-                    <label for="message">Questions:</label>
-                    <textarea id="message" name="message"></textarea>
-                </p>
-
-                <input type="submit" value="Request a Spot">
-            </fieldset>
+          <label for="email">Email:</label>
+<input type="email" id="email" name="email">
+<p id="email-error"></p>
         </form>
     </main>
 
