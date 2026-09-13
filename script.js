@@ -68,3 +68,10 @@ window.onload = function () {
     }
 
 };
+
+
+const workshops = [
+    "Beginner Yoga Basics",
+    "Desk-to-Mat Stretch Workshop",
+    "Rest and Restore Evening"
+];
